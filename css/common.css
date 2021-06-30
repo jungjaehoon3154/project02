@@ -1,38 +1,48 @@
 @charset "utf-8";
 
 /* header */
-#header{position: fixed; top: 0 ;left: 0; width: 100%; height: 90px; color: #fff; z-index: 100; overflow: hidden;}
-.header_wrap{position: relative; max-width: 1180px;  margin: 0 auto; height: 90px;}
+#header{position: fixed; top: 0 ;left: 0; width: 100%; height: 90px; color: #fff; z-index: 100; overflow: hidden; transition: height 0.3s ease-in-out, background-color 0.4s ease-in-out;}
+.header_wrap{position: relative; max-width: 1180px; margin: 0 auto; height: 90px;}
 .header_wrap .logo{position: absolute; top: 50%; transform: translateY(-50%); left: 0;}
 .header_wrap .logo a{display: block; background: url("../img/common/logo.png") no-repeat; width: 170px; height: 56px; text-indent: 100%; white-space: nowrap; overflow: hidden;}
 
-#header.on{background: #fff; height: 350px;}
-#header.on .logo a{background-image: url("../img/common/logo_on.png");}
-#header.on::before{content: "";position: absolute;top: 89px;left: 0;width: 100%;height: 1px;background: #ddd;}
+#header.on{background: #fff; height: 350px; box-shadow: 0 1px 10px rgba(0 0 0 / 30%); transition: all 0.3s;}
+#header.on .logo a{background-image: url("../img/common/logo_on.png"); width: 170px; height: 56px;}
+#header.on::before{content: ""; position: absolute; top: 89px; left: 0; width: 100%; height: 1px; background: #ddd;}
 
-
-#gnb{text-align: center; width: 1180px; padding-left: 100px; box-sizing: border-box;}
-#gnb > ul > li{position: relative; display: inline-block; height: 90px; line-height: 90px;}
-#gnb > ul > li > a{position: relative; display: block; font-size: 20px; padding: 0 30px; transition: 0.3s;} 
-#gnb > ul > li > a:hover, #gnb > ul > li > ul > li:hover a, #gnb > ul > li > a:focus, #gnb > ul > li > ul > li a:focus{color: #ff6600; transition: all 0.3s;}
+#gnb{text-align: center; width: 100%;}
+#gnb > ul{display: flex; justify-content: center;}
+#gnb > ul > li{position: relative; height: 90px; line-height: 90px;}    
+#gnb > ul > li > a{position: relative; display: block; font-size: 20px; padding: 0 25px; transition: all 0.3s;} 
+#gnb > ul > li > a:hover, #gnb > ul > li > ul > li:hover a{color: #ff6600; transition: all 0.3s;}
 #gnb > ul > li > a::after{content: ''; position: absolute; bottom: 0px; left: 50%; width: 0; height: 2px; background: #ff6600; transition: all 0.3s;}
-#gnb > ul > li > a:hover::after{left: 0; width: 100%;}
+#gnb > ul > li:hover > a::after{left: 0; width: 100%;}
 #gnb > ul > li > ul{height: 350px; overflow: hidden; padding-top: 15px;} 
 #gnb > ul > li > ul > li{line-height: 35px;}
-#gnb > ul > li > ul > li > a{display: block;}
 
 #gnb.active{color: #222;}
-
 #header.on #gnb > ul > li > a{color: #222;}
 #header.on #gnb > ul > li:hover > a{color: #ff6600;}
 
-.util{position: absolute; top: 50%; transform: translateY(-50%); right: 0; display: flex; align-items: center;}
-.util button{background: url(../img/common/btn_menu.png) no-repeat; width: 28px; height: 22px; margin-left: 40px;}
+#gnb_mobile{display: none;}
+
+.lang{position: absolute; top: 50%; transform: translateY(-50%); right: 10%; width: 50px; text-align: center;}
 .lang > a{display: block; height: 90px; line-height: 90px;}
 .lang_list{position: relative;}
-.lang_list ul{position: absolute; top: 0; left: 0; width: 100%; display: none;}
-.lang_list ul li{line-height: 35px;}
+.lang_list ul{position: absolute; top: 0; left: 0; width: 100%;}
+.lang_list ul li{line-height: 35px; text-align: center;}
 .lang_list ul li:first-child{padding-top: 15px;}
+.lang_list ul li a{transition: all 0.3s;}
+
+#header.on .lang a{color: #222;}
+#header.on .util ul li:hover a{color: #ff6600;}
+
+
+.header_wrap button{position: relative; width: 33px; height: 35px; text-indent: 100%; white-space: nowrap; overflow: hidden; display: none;}
+.header_wrap button .top, .header_wrap button .mid, .header_wrap button .bot{display: block; position: absolute; width: 32px; height: 2px; background: #fff;}
+.header_wrap button .top{top: 7px;}
+.header_wrap button .mid{top: 50%; transform:translateY(-50%);}
+.header_wrap button .bot{bottom: 7px;}
 
 
 /* footer */
@@ -69,7 +79,37 @@
 
 
 
+
+@media all and (max-width: 1200px){
+    #gnb, .lang{display: none;}
+    .header_wrap button{display: block; position: absolute; top: 25%; right: 5%;} 
+    .header_wrap .logo{left: 20px;}
+    
+   /* 
+    #gnb_mobile, 
+    #gnb_mobile{position: fixed; top: 0; right: 0; width: 60%; height: 100%; background: #fff; color: #222;}
+    #gnb_mobile .util_box{padding-left: 30px; height: 60px;}
+    #gnb_mobile button{position: absolute; top: 20px; right: 25px; width: 23px; height: 23px;}
+    #gnb_mobile button span{position: absolute; left: 50%; top: 50%; width: 30px; height: 2px; margin: -1px 0 0 -15px; background-color: #000;}
+    #gnb_mobile button .top{transform: rotate(45deg);}
+    #gnb_mobile button .bot{transform: rotate(-45deg);}
+    #gnb_mobile .gnb_wrap{margin-top: 40px;}
+    #gnb_mobile > ul > li{margin-bottom: 20px;}*/
+    
+}
+
+
 @media all and (max-width: 1024px){
     .footer_inner .family_site{display: none;}
     .footer_inner .link_box{justify-content: flex-end;}
+}
+@media all and (max-width: 480px){
+
+    .header_wrap .logo a{background: url("../img/common/logo_m.png") no-repeat; width: 121px;}
+    .header_wrap button{position: relative; width: 28px; height: 20px; position: absolute; top: 30%; right: 5%; }
+    .header_wrap button .top, .header_wrap button .mid, .header_wrap button .bot{display: block; position: absolute; width: 28px; height: 2px; background: #fff;}
+    .header_wrap button .top{top: 1px;}
+    .header_wrap button .bot{bottom: 1px;}
+    
+    
 }

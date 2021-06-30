@@ -24,7 +24,7 @@
     <div id="wrap">
         <header id="header">
             <div class="header_wrap">
-                <h1 class="logo"><a href="">한화건설</a></h1>
+                <h1 class="logo"><a href=""><span class="blind"></span>한화건설</a></h1>
                 <nav id="gnb">
                     <h2 class="blind">주메뉴</h2>
                     <ul>
@@ -84,25 +84,101 @@
                                 <li><a href="">사이버신문고</a></li>
                                 <li><a href="">공지사항</a></li>
                             </ul>  
-
                         </li>
                     </ul>
                 </nav>
-                <div class="util">
-                    <div class="lang">
-                        <span class="blind">언어선택</span>
-                        <a href="">lang</a>
-                        <div class="lang_list">
-                            <ul>
-                                <li><a href="" title="사이트 언어를 한국어로 변경합니다.">kor</a></li>
-                                <li><a href="" title="사이트 언어를 영어로 변경합니다.">eng</a></li>
-                            </ul>
-                        </div>
+            <!--<div id="gnb_mobile">
+                    <div class="util_box">
+                        <h2 class="blind">언어선택</h2>
+                        <span><a href="">KOR</a></span>
+                        <span><a href="">ENG</a></span>
                     </div>
                     <button type="button">
-                        <span class="blind">전체메뉴 보기</span>
+                        <h2 class="blind">메뉴 닫기</h2>
+                        <span class="top"></span>
+                        <span class="bot"></span>
                     </button>
+                    <div class="gnb_wrap">
+                        <nav id="gnb">
+                            <h2 class="blind">주메뉴</h2>
+                            <ul>
+                                <li>
+                                    <a href="">회사소개</a>
+                                    <ul>
+                                        <li><a href="">기업소개</a></li>
+                                        <li><a href="">회사연혁</a></li>
+                                        <li><a href="">한화그룹</a></li>
+                                        <li><a href="">재무정보</a></li>
+                                        <li><a href="">오시는길</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">사업분야</a>
+                                    <ul>
+                                        <li><a href="">건축사업</a></li>
+                                        <li><a href="">주택사업</a></li>
+                                        <li><a href="">토목사업</a></li>
+                                        <li><a href="">플랜트사업</a></li>
+                                        <li><a href="">마스터피스</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">지속가능경영</a>
+                                    <ul>
+                                        <li><a href="">윤리경영</a></li>
+                                        <li><a href="">상생경영</a></li>
+                                        <li><a href="">안전녹생경영</a></li>
+                                        <li><a href="">품질경영</a></li>
+                                        <li><a href="">사회공헌</a></li>
+                                        <li><a href="">기술제안센터</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">홍보센터</a>
+                                    <ul>
+                                        <li><a href="">뉴스룸</a></li>
+                                        <li><a href="">소셜채널</a></li>
+                                        <li><a href="">홍보자료</a></li>
+                                        <li><a href="">CI/BI</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">인재채용</a>
+                                    <ul>
+                                        <li><a href="">인재상</a></li>
+                                        <li><a href="">직무소개</a></li>
+                                        <li><a href="">인사제도</a></li>
+                                        <li><a href="">채용정보</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="">고객센터</a>
+                                    <ul>
+                                        <li><a href="">고객문의</a></li>
+                                        <li><a href="">사이버신문고</a></li>
+                                        <li><a href="">공지사항</a></li>
+                                    </ul>  
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>-->
+                <div class="lang">
+                    <span class="blind">언어선택</span>
+                    <a href="">lang</a>
+                    <div class="lang_list">
+                        <ul>
+                            <li><a href="" title="사이트 언어를 한국어로 변경합니다.">kor</a></li>
+                            <li><a href="" title="사이트 언어를 영어로 변경합니다.">eng</a></li>
+                        </ul>
+                    </div>
                 </div>
+                <button type="button">
+                    <span class="blind">전체메뉴 보기</span>
+                    <span class="top"></span>
+                    <span class="mid"></span>
+                    <span class="bot"></span>
+                </button>     
             </div>
         </header>
         <!-- // header -->
@@ -111,28 +187,32 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide slide1">
-                        <img src="img/visual/visual_01.png" alt="">
+                        <img class="pc_visul" src="img/visual/visual_01.png" alt="">
+                        <img class="mobile_visual" src="img/visual/visual_m01.jpg" alt="">
                         <div class="txt_box">
                             <strong>서울숲과 한강을<br>모두 가진<br> 하이엔드 주거공간</strong>
                             <h2>서울숲 갤러리아 포레</h2>
                         </div>
                     </div>
                     <div class="swiper-slide slide2">
-                        <img src="img/visual/visual_02.jpg" alt="">
+                        <img class="pc_visul" src="img/visual/visual_02.jpg" alt="">
+                        <img class="mobile_visual" src="img/visual/visual_m02.jpg" alt="">
                         <div class="txt_box">
                             <strong>서울 중심에서 빛나는<br>프리미엄 브랜드<br>FORENA</strong>
                             <h2>포레나 영등포</h2>
                         </div>
                     </div>
                     <div class="swiper-slide slide3">
-                        <img src="img/visual/visual_03.jpg" alt="">
+                        <img class="pc_visul" src="img/visual/visual_03.jpg" alt="">
+                        <img class="mobile_visual" src="img/visual/visual_m03.jpg" alt="">
                         <div class="txt_box">
                             <strong>10만 가구, 60만 인구<br>12조원 규모의<br>해외 신도시 수출</strong>
                             <h2>이라크 비스미야 신도시</h2>
                         </div>
                     </div>
                     <div class="swiper-slide slide4">
-                        <img src="img/visual/visual_04.png" alt="">
+                        <img class="pc_visul" src="img/visual/visual_04.png" alt="">
+                        <img class="mobile_visual" src="img/visual/visual_m04.jpg" alt="">
                         <div class="txt_box">
                             <strong>연간 1,500,000톤<br>Phosphoric Acid<br>생산설비</strong>
                             <h2>사우디 Umm Wu'al인산 플랜트</h2>
@@ -145,7 +225,9 @@
                         <div class="visual_nav">
                             <div class="swiper-button-prev"></div>
                             <div class="swiper-button-next"></div>
-                            <div class="swiper-pagination"></div>
+                            <div class="swiper-pagination">
+                                
+                            </div>
                             <a href=""></a>
 
                             <a href=""></a>
