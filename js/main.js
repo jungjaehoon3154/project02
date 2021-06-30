@@ -1,17 +1,4 @@
 
-/*
-$(document).ready(function () {
-    const $firstMenu = $('#gnb > ul > li')
-        $gnb = $('#gnb');
-    $firstMenu.mouseover(function () {
-        $gnb.stop().animate({height: '500px'},300);
-    })
-    .mouseout(function() {
-        $gnb.stop().animate({height: '100px'},300);
-    });   
-});
-*/
-
 $(document).ready(function () {
     const swiper = new Swiper('.swiper-container', {
         // Optional parameters
@@ -31,6 +18,14 @@ $(document).ready(function () {
         autoplay: {
             delay: 4000,
         }
-
     });  
+
+    $('.counter').counterUp({
+        delay: 10,
+        time: 1500
+    });
+
+
+    
 });
+

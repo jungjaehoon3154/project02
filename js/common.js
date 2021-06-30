@@ -1,36 +1,16 @@
 $(document).ready(function() {
-  /* 
-  0) depth2 ul 숨기고 시작한다
-  1) 스크롤이벤트 추가 : 스크롤의 수직이동거리가 10픽셀 초과라면 #header.on 추가
-  2) 네비게이션 진입 : 마우스(mouseenter), 키보드(focusin) 동시 : depth1 li
-  3) 네비게이션 이탈
-  마우스(mouseleave) : depth1 ul
-  키보드(blur) : 첫번째 a, 마지막 a
-  */
+
   const $gnb = $('#gnb > ul');
   const $gnbDep2 = $gnb.find('li ul');
 
   $gnbDep2.hide();
-
-  // 1) 스크롤이벤트 추가 : 스크롤의 수직이동거리가 10픽셀 초과라면 #header.on 추가
-  $(window).on('scroll', function () {
-    if ($(this).scrollTop() > 10) {
-      $('#header').addClass('on');
-    } else {
-      $('#header').removeClass('on');
-    }
-
-    // if ($(this).scrollTop() > 10) $('#header').addClass('on');
-    // else $('#header').removeClass('on');
-  });
-
-  // 2) 마우스(mouseenter), 키보드(focusin) 진입 
+ 
   $gnb.children().on('mouseenter focusin', function () {
-    // depth1 li.on 제어
-    $(this).addClass('on').siblings('li.on').removeClass('on');
-    // depth2 ul 열리기
+    
+    $(this).addClass('on').siblings('#header.on').removeClass('on');
+    
     $gnbDep2.stop().slideDown();
-    // 필수 아님 : 현재 디자인 컨셉 - depth1과 depth2를 구별하기 위한 가상요소
+
     $('#header').addClass('on').find('#gnb').addClass('active');
   });
 
@@ -47,14 +27,33 @@ $(document).ready(function() {
     });
   });
 
-  // 4) 첫번째 a, 마지막 a 에서 키보드(blur)
-  // 첫번째 a : shift + tab
-  $gnb.find('a').first().on('keydown', function (e) {
-    console.log(e.keyCode); //tab : 9, 오른쪽 shift : 16
-    if ((e.shiftKey || e.keyCode === 16) && e.keyCode === 9) $gnb.trigger('mouseleave');
+
+
+  
+
+ 
+
+
+
+
+  $('.family_site button').on('click', function() {
+    $('.family_site ul').fadeToggle('fast')
+    $('.family_site').toggleClass('active')
   });
-  // 마지막 a : shift (x) , tab만 누르는 경우
-  $gnb.find('a').last().on('keydown', function (e) {
-    if ((!e.shiftKey || e.keyCode !== 16) && e.keyCode === 9) $gnb.trigger('mouseleave');
-  });
-});
+    $('.family_site button').on('keydown', function(e){
+      console.log(e.keyCode);  //tab 9
+      if (e.shiftKey && e.keyCode === 9) $('.family_site button').trigger('click')
+    });
+    $('.family_site a').last().on('keydown', function(e){
+      if (!e.shiftKey && e.keyCode === 9) $('.family_site button').trigger('click')
+    });
+
+
+    
+
+}); 
+
+
+
+
+
