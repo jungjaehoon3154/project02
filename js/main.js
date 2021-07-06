@@ -17,14 +17,16 @@ $(document).ready(function () {
             prevEl: '.swiper-button-prev',
         },
         autoplay: {
-            delay: 4000,
+            delay: 3000,
         }
     });  
 
     $('.counter').counterUp({
         delay: 10,
-        time: 1500
+        time: 1000
     });
+
+   
 
 
     
