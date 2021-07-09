@@ -5,6 +5,8 @@ $(document).ready(function () {
         direction: 'horizontal',
         loop: true,
 
+        speed : 500,
+
         // If we need pagination
         pagination: {
             el: '.swiper-pagination',
@@ -17,9 +19,37 @@ $(document).ready(function () {
             prevEl: '.swiper-button-prev',
         },
         autoplay: {
-            delay: 3000,
+            delay: 6000,
+            disableOnInteraction: false
+        },
+
+        breakpoints: {
+            /* when window width is >= 320px
+            480: {
+              
+             
+              pagination: {
+                el: '.swiper-pagination',
+                type: 'bullets',
+            },
+            }*/
         }
+
+
     });  
+
+    $('.start').on('click', function() {
+        swiper.autoplay.start();
+        $(this).addClass('hidden').siblings().removeClass('hidden');
+        return false;
+      });
+    $('.stop').on('click', function() {
+        swiper.autoplay.stop();
+        $(this).addClass('hidden').siblings().removeClass('hidden');
+        return false;
+    });
+    
+    
 
     $('.counter').counterUp({
         delay: 10,
