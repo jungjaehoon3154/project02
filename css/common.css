@@ -103,7 +103,7 @@
     #header .logo{left: 20px;}
     #header .util, #gnb{display: none;}
     .gnb_open{display: block; position: absolute; top: 25%; right: 5%;} 
-    .mobile{display: block;}
+    .mobile{display: ;}
     
 }
 @media all and (max-width: 1024px){
