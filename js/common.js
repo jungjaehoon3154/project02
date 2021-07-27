@@ -34,17 +34,12 @@ $(document).ready(function() {
   $('.util .lang button').on('mouseenter focusin', function () {
     $(this).next().stop().slideDown('fast');
   });
-<<<<<<< HEAD
   $('.util .lang').on('mouseleave', function () {
     $(this).children('ul').stop().slideUp();
   });
   $('.util .lang li:last').on('focusout', function () {
-=======
-  $('.util .lang li:last').on('mouseleave focusout', function () {
->>>>>>> e3dd3c9d8faafd6d8458eceb676fb444f1735c59
     $(this).parent('ul').stop().slideUp();
   });
-
 
   // 모바일 네비게이션
   // 전체메뉴 열기 클릭 => 닫기 이벤트 함께 처리
