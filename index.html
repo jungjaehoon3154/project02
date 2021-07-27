@@ -12,7 +12,6 @@
 
 <!-- css -->
 <link rel="stylesheet" href="css/swiper-bundle.css">
-<link rel="stylesheet" href="fonts/fonts.css">
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/common.css">
 <link rel="stylesheet" href="css/main.css">
@@ -31,6 +30,9 @@
     </div>
     <div id="wrap">
         <header id="header">
+            <div class="header_wrap">
+                
+            </div>
             <div class="pc">
                 <h1 class="logo">
                     <a href="#"><span class="blind">한화건설</span></a>
@@ -115,17 +117,13 @@
                 <span class="mid"></span>
                 <span class="bot"></span>
             </button> 
+            <div id="dim"></div>
             <div class="mobile">
                 <div class="mobile_util">
                     <span class="blind">언어선택</span>
-                    <span><a href="#">KOR</a></span>
+                    <span><a href="#" class="first">KOR</a></span> <!-- 모바일 네비게이션이 열리고 처음 포커스 이동 대상 -->
                     <span><a href="#">ENG</a></span>
                 </div>
-                <button type="button" class="gnb_close">
-                    <span class="blind">전체메뉴 닫기</span>
-                    <span class="top"></span>
-                    <span class="bot"></span>
-                </button>
                 <nav id="mobile_gnb">
                     <ul>
                         <li>
@@ -189,28 +187,34 @@
                 </nav>    
                 <div class="mobile_social">
                     <ul>
-                        <li class="blog"><a href="https://blog.naver.com/hanwha_enc" target="_blank"></a>블로그</li>
-                        <li class="youtube"><a href="https://www.youtube.com/channel/UCYjfgiex4aTgDgcn0zsU-MA" target="_blank"></a>유튜브</li>
-                        <li class="post"><a href="https://m.post.naver.com/hanwha_enc" target="_blank"></a>포스트</li>
+                        <li class="blog"><a href="https://blog.naver.com/hanwha_enc" target="_blank"></a><span class="blind">블로그</span></li>
+                        <li class="youtube"><a href="https://www.youtube.com/channel/UCYjfgiex4aTgDgcn0zsU-MA" target="_blank"></a><span class="blind">유튜브</span></li>
+                        <li class="post"><a href="https://m.post.naver.com/hanwha_enc" target="_blank"></a><span class="blind">포스트</span></li>
                     </ul>
                 </div>
                 <div class="mobile_family_site">
                     <a href="" class="link">Family Site</a>
-                        <ul class="family_box">
-                            <li><a href="#">(주)한화</a></li>
-                            <li><a href="#">한화에어로스페이스</a></li>
-                            <li><a href="#">한화디펜스</a></li>
-                            <li><a href="#">한화시스템</a></li>
-                            <li><a href="#">한화테크윈</a></li>
-                            <li><a href="#">한화정밀기계</a></li>
-                            <li><a href="#">한화파워시스템</a></li>
-                            <li><a href="#">한화솔루션</a></li>
-                            <li><a href="#">한화종합화학</a></li>
-                            <li><a href="#">한화토탈</a></li>
-                            <li><a href="#">여천NCC</a></li>
-                            <li><a href="#">한화에너지</a></li>
-                        </ul>
+                    <ul class="family_box">
+                        <li><a href="#">(주)한화</a></li>
+                        <li><a href="#">한화에어로스페이스</a></li>
+                        <li><a href="#">한화디펜스</a></li>
+                        <li><a href="#">한화시스템</a></li>
+                        <li><a href="#">한화테크윈</a></li>
+                        <li><a href="#">한화정밀기계</a></li>
+                        <li><a href="#">한화파워시스템</a></li>
+                        <li><a href="#">한화솔루션</a></li>
+                        <li><a href="#">한화종합화학</a></li>
+                        <li><a href="#">한화토탈</a></li>
+                        <li><a href="#">여천NCC</a></li>
+                        <li><a href="#">한화에너지</a></li>
+                    </ul>
                 </div>
+                <!-- 가장 마지막으로 이동 -->
+                <button type="button" class="gnb_close last">
+                    <span class="blind">전체메뉴 닫기</span>
+                    <span class="top"></span>
+                    <span class="bot"></span>
+                </button>
             </div>    
         </header>
         <!-- // header -->
@@ -219,7 +223,7 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img class="pc_visul" src="img/visual/visual_01.png" alt="">
+                        <img class="pc_visul" src="img/visual/visual_01.jpg" alt="">
                         <img class="mobile_visual" src="img/visual/visual_m01.jpg" alt="">
                         <div class="txt_box">
                             <strong>서울숲과 한강을<br>모두 가진<br> 하이엔드 주거공간</strong>
@@ -243,7 +247,7 @@
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img class="pc_visul" src="img/visual/visual_04.png" alt="">
+                        <img class="pc_visul" src="img/visual/visual_04.jpg" alt="">
                         <img class="mobile_visual" src="img/visual/visual_m04.jpg" alt="">
                         <div class="txt_box">
                             <strong>연간 1,500,000톤<br>Phosphoric Acid<br>생산설비</strong>

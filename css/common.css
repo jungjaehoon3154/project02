@@ -37,32 +37,46 @@
 .gnb_open .top{top: 7px;}
 .gnb_open .mid{top: 50%; transform:translateY(-50%);}
 .gnb_open .bot{bottom: 7px;}
-.mobile{display: none; background: #fff;  position: fixed; top: 0; right: 0; height: 100%; width: 80%; max-width: 500px; color: #333; padding-bottom: 50px; overflow: auto;}
-.mobile .mobile_util{height: 60px; padding-left: 30px; line-height: 60px;}
+
+#dim, .mobile{position: fixed; top: 0; height: 100%; z-index: 1000;}
+#dim{display: none; left: 0; width: 100%; background: rgba(0,0,0,.5);}
+.mobile{visibility: hidden; overflow: hidden; max-width: 0; background: #fff; left: 100%; width: 80%; color: #333; padding-bottom: 50px; overflow-y: auto;}
+.mobile .mobile_util{position: relative; height: 60px; padding-left: 30px; line-height: 60px;}
 .mobile .mobile_util span:last-child{margin-left: 20px;}
-.mobile .gnb_close{position: absolute; top: 20px; right: 50px; width: 23px; height: 23px;}
+.mobile .gnb_close{position: absolute; top: 23px; right: 50px; width: 23px; height: 23px;}
 .mobile .gnb_close span{background: #333; margin-right: 15px; position: absolute; left: 50%; top: 50%; width: 30px; height: 2px;}
 .mobile .gnb_close .top{transform: rotate(45deg);}
 .mobile .gnb_close .bot{transform: rotate(-45deg);}
 #mobile_gnb{margin-top: 30px;}
-#mobile_gnb > ul > li{margin-bottom: 40px;}
+#mobile_gnb > ul > li{margin-bottom: 20px;} /* 40px */
 #mobile_gnb > ul > li > a{position: relative; display: block; padding-left: 30px; font-size: 18px; font-weight: 700; margin-bottom: 15px;}
 #mobile_gnb > ul > li > a::after{position: absolute; content: ""; top: 50%; transform: translateY(-50%); right: 30px; background: url(../img/common/link_arrow.png) no-repeat; width: 15px; height: 8px; background-size: cover;}
-#mobile_gnb > ul > li > ul{padding: 12px 30px; border-top: 1px solid #e9e9e9; border-bottom: 1px solid #e9e9e9; background: #f8f8f8; display: none;}
+/* 화살표 회전 시켜주세요 */
+#mobile_gnb > ul > li.on > a::after{}
+
+/* 모바일 네비게이션에서는 display: none 하지 마세요. 아이폰에서 포커스가 가지 못하는 버그 있습니다. 대신 visibility: hidden; overflow: hidden; max-height: 0;으로 대신 합니다
+뎁스2 ul에는 수직방향에 여백이 존재하면 안됩니다. max-height: 0; 이라고 해도 여백때문에 공백이 생겨나니까요;
+수평여백은 두고 수직여백은 첫번째와 마지막 li 태그에서 넘겨줍니다 */
+#mobile_gnb > ul > li > ul{visibility: hidden; overflow: hidden; max-height: 0; padding: 0px 30px; border-top: 1px solid #e9e9e9; border-bottom: 1px solid #e9e9e9; background: #f8f8f8;}
+#mobile_gnb ul li ul li:first-child{padding-top: 12px;}
+#mobile_gnb ul li ul li:last-child{padding-bottom: 12px;}
 #mobile_gnb > ul > li > ul > li > a{display: block; padding: 15px 0;}
 .mobile .mobile_social{border-top: 1px solid #e9e9e9;}
 .mobile .mobile_social ul{margin-top: 20px; padding-left: 30px;}
 .mobile .mobile_social li{display: inline-block; margin-left: 30px;}
 .mobile .mobile_social li:first-child{margin-left: 0;}
-.mobile .mobile_social a{display: block; text-indent: 100%; white-space: nowrap; overflow: hidden; background-repeat: no-repeat;}
-.mobile .mobile_social .blog a{background: url(../img/common/m_blog_icon.png); width: 12px; height: 17px;}
-.mobile .mobile_social .youtube a{background: url(../img/common/m_youtube_icon.png); width: 23px; height: 17px;}
-.mobile .mobile_social .post a{background: url(../img/common/m_post_icon.png); width: 11px; height: 16px;}
-.mobile .mobile_family_site{padding: 0 25px  0 30px; margin-top: 30px;}
+.mobile .mobile_social a{display: block; text-indent: 100%; white-space: nowrap; overflow: hidden; background-repeat: no-repeat;background-size: cover;}
+.mobile .mobile_social .blog a{background-image: url(../img/common/m_blog_icon.png); width: 12px; height: 17px;}
+.mobile .mobile_social .youtube a{background-image: url(../img/common/m_youtube_icon.png); width: 23px; height: 17px;}
+.mobile .mobile_social .post a{background-image: url(../img/common/m_post_icon.png); width: 11px; height: 16px;}
+.mobile .mobile_family_site{padding: 0 25px 20px 30px; margin-top: 30px;}
 .mobile .mobile_family_site .link{position: relative; display: block; padding-bottom: 15px; color: #ff6600;}
 .mobile .mobile_family_site .link::before{position: absolute; content: ""; bottom: 0; left: 0; width: 100%; background: #ff6600; height: 3px;}
 .mobile .mobile_family_site .link::after{position: absolute; content: ""; top: 0; right: 0; width: 11px; height: 7px; background: url(../img/common/family_site_arrow.png) no-repeat; background-size: cover;} 
-.mobile .mobile_family_site .family_box{display: none;}
+
+/* 여기도 display: none; 대신에 visibility: hidden으로 수정합니다 */
+.mobile .mobile_family_site .family_box{visibility: hidden;overflow: hidden;max-height: 0;}
+
 .mobile .mobile_family_site .family_box li:first-child{margin-top: 20px;}
 .mobile .mobile_family_site .family_box a{display: block; padding: 10px 0;}
 
@@ -102,8 +116,8 @@
 @media all and (max-width: 1200px){
     #header .logo{left: 20px;}
     #header .util, #gnb{display: none;}
-    .gnb_open{display: block; position: absolute; top: 25%; right: 5%;} 
-    .mobile{display: ;}
+    .gnb_open{display: block; position: absolute; top: 25%; right: 3%;} 
+    /* .mobile{visibility: visible;max-width: 80%;} */
     
 }
 @media all and (max-width: 1024px){
@@ -115,10 +129,6 @@
     #header .logo a{background: url("../img/common/m_logo.png") no-repeat; width: 121px; height: 40px;}
     #header.on .logo a{background: url("../img/common/m_logo_on.png") no-repeat; width: 121px; height: 40px;}
     #header.on::before{display: none;}
-    .gnb_open{position: relative; width: 28px; height: 20px; position: absolute; top: 37%; right: 5%; }
-    .gnb_open .top, .gnb_open .mid, .gnb_open .bot{display: block; position: absolute; width: 28px; height: 2px; background: #fff;}
-    .gnb_open .top{top: 1px;}
-    .gnb_open .bot{bottom: 1px;}
 
     #footer .link{border-bottom: none;}
     #footer .link_box, #footer .info .social{display: none;}
