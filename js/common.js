@@ -14,28 +14,31 @@ $(document).ready(function() {
       $('#header').removeClass('on');
     }
   }); 
- 
+
   $gnb.on('mouseenter focusin', function () {
     $gnbDep2.stop().slideDown();
-
     $('#header').addClass('on').find('#gnb').addClass('active');
-
   });
   $header.on('mouseleave', function () {
     // $gnbDep2.stop().slideUp();
     // $('#header').removeClass('on').find('#gnb').removeClass('active');
-
-    $gnbDep2.stop().slideUp(function () {
-      $('#header').removeClass('on').find('#gnb').removeClass('active');
+  $gnbDep2.stop().slideUp(function () {
+    $('#header').removeClass('on').find('#gnb').removeClass('active');
     });
   }); 
+  $gnb.find('a').last().on('keydown', function (e) {
+    if ((!e.shiftKey || e.keyCode !== 16) && e.keyCode === 9) $gnb.trigger('mouseleave');
+  });
 
-
-  $('.util .lang button').on('mouseenter click focusin', function () {
+  // 언어선택
+  $('.util .lang button').on('mouseenter focusin', function () {
     $(this).next().stop().slideDown('fast');
   });
-  $('.util .lang').on('mouseleave focusout', function () {
-    $(this).children('ul').stop().slideUp('fast');
+  $('.util .lang').on('mouseleave', function () {
+    $(this).children('ul').stop().slideUp();
+  });
+  $('.util .lang li:last').on('focusout', function () {
+    $(this).parent('ul').stop().slideUp();
   });
 
   // 모바일 네비게이션
