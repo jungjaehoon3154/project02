@@ -121,7 +121,6 @@
 /* CSS Mode */
 .swiper-container-css-mode > .swiper-wrapper {
   overflow: auto;
-  scrollbar-width: none;
   /* For Firefox */
   -ms-overflow-style: none;
   /* For Internet Explorer and Edge */
@@ -148,7 +147,6 @@
 .swiper-button-next {
   position: absolute;
   top: 50%;
-  width: calc(var(--swiper-navigation-size) / 44 * 27);
   height: var(--swiper-navigation-size);
   z-index: 10;
   cursor: pointer;

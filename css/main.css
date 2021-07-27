@@ -96,6 +96,7 @@
 /* promote */
 .promote{background: #f3f3f3;}
 .promote li{float: left; width: 50%;}
+.promote .left iframe{width: 100%;}
 .promote .right{position: relative;}
 .promote .right a:focus{display: block; position: relative; z-index: 10;}
 .promote .right .img_box{height: 250px; width: 100%; overflow: hidden;}
