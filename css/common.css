@@ -42,9 +42,14 @@
 #dim{display: none; left: 0; width: 100%; background: rgba(0,0,0,.5);}
 .mobile{visibility: hidden; overflow: hidden; max-width: 0; background: #fff; left: 100%; width: 80%; color: #333; padding-bottom: 50px; overflow-y: auto;}
 .mobile .mobile_util{position: relative; height: 60px; padding-left: 30px; line-height: 60px;}
+<<<<<<< HEAD
 .mobile .mobile_util .first{color:#ff6600;}
 .mobile .mobile_util span:last-child{margin-left: 20px;}
 .mobile .gnb_close{position: absolute; top: 23px; right: 50px;}
+=======
+.mobile .mobile_util span:last-child{margin-left: 20px;}
+.mobile .gnb_close{position: absolute; top: 23px; right: 50px; width: 23px; height: 23px;}
+>>>>>>> e3dd3c9d8faafd6d8458eceb676fb444f1735c59
 .mobile .gnb_close span{background: #333; margin-right: 15px; position: absolute; left: 50%; top: 50%; width: 30px; height: 2px;}
 .mobile .gnb_close .top{transform: rotate(45deg);}
 .mobile .gnb_close .bot{transform: rotate(-45deg);}
@@ -128,6 +133,10 @@
     #header .logo a{background: url("../img/common/m_logo.png") no-repeat; width: 121px; height: 40px;}
     #header.on .logo a{background: url("../img/common/m_logo_on.png") no-repeat; width: 121px; height: 40px;}
     #header.on::before{display: none;}
+<<<<<<< HEAD
+=======
+
+>>>>>>> e3dd3c9d8faafd6d8458eceb676fb444f1735c59
     #footer .link{border-bottom: none;}
     #footer .link_box, #footer .info .social{display: none;}
     #footer .info .tel{position: absolute; top: -25px; left: 0; font-size: 14px;}
