@@ -7,23 +7,24 @@ $(document).ready(function() {
 
   const $header = $('#header');
 
+  // 헤더 스크롤 고정
   $(window).on('scroll', function () {
     if ($(this).scrollTop() > 10) {
-      $('#header').addClass('on');
+      $('#header').addClass('on scroll');
     } else {
-      $('#header').removeClass('on');
+      $('#header').removeClass('on scroll');
     }
   }); 
 
+  // 네비 제어
   $gnb.on('mouseenter focusin', function () {
     $gnbDep2.stop().slideDown();
     $('#header').addClass('on').find('#gnb').addClass('active');
   });
   $header.on('mouseleave', function () {
-    // $gnbDep2.stop().slideUp();
-    // $('#header').removeClass('on').find('#gnb').removeClass('active');
-  $gnbDep2.stop().slideUp(function () {
-    $('#header').removeClass('on').find('#gnb').removeClass('active');
+    $gnbDep2.stop().slideUp(function () {
+      if ($('#header').is('.scroll')) $('#gnb').removeClass('active');
+      else $('#header').removeClass('on').find('#gnb').removeClass('active');
     });
   }); 
   $gnb.find('a').last().on('keydown', function (e) {
@@ -34,15 +35,16 @@ $(document).ready(function() {
   $('.util .lang button').on('mouseenter focusin', function () {
     $(this).next().stop().slideDown('fast');
   });
-  $('.util .lang li:last').on('mouseleave focusout', function () {
+  $('.util .lang').on('mouseleave', function () {
+    $(this).children('ul').stop().slideUp();
+  });
+  $('.util .lang li:last').on('focusout', function () {
     $(this).parent('ul').stop().slideUp();
   });
 
-
   // 모바일 네비게이션
-  // 전체메뉴 열기 클릭 => 닫기 이벤트 함께 처리
   $('.gnb_open').on('click', function () {
-    // 0) 변수 설정
+  
     const $openBtn = $(this);
     const $dim = $('#dim');
     const $mGnb = $openBtn.next().next();
@@ -59,7 +61,6 @@ $(document).ready(function() {
     $mGnb.css('visibility', 'visible').stop().animate({left: '20%', maxWidth: '80%'});
     $first.focus();
 
-    // 3) 첫번째 포커스요소와 마지막 포커스 요소 제어 - 키보드 트래핑
     $first.on('keydown', function (e) {
       console.log(e.keyCode); //tab => 9
       if (e.shiftKey && e.keyCode === 9) {
@@ -85,13 +86,10 @@ $(document).ready(function() {
         // 추가사항) #mobile_gnb li.on 제거 열려진 뎁스2 ul은 숨기기
         $(this).css({visibility: 'hidden', maxWidth: 0}).find('#mobile_gnb ul li.on').removeClass('on').children('ul').css({visibility: 'hidden', maxHeight: 0});
         familyUp();  //패밀리사이트가 열려있다면 이것도 닫아주기
-        
         $openBtn.focus();
       });
     });
-
   });
-
   // 네비게이션 열리고 닫기기(depth1 a 클릭)
   $('#mobile_gnb > ul > li > a').on('click', function () {
     if ($(this).next().length === 0) {  //뎁스1a 만 있는 경우
@@ -107,18 +105,12 @@ $(document).ready(function() {
       $(this).parent().siblings().removeClass('on').children('ul').stop().animate({maxHeight: 0}, function () {
         $(this).css({visibility: 'hidden'});
       });
-
       if ($(this).parent().hasClass('on')) { //현재 클릭해서 열려져 있는 경우
         $(this).parent().removeClass('on').children('ul').stop().animate({maxHeight: 0}, function () {
           $(this).css({visibility: 'hidden'});
         });
-        
-        /* $(this).next().stop().animate({maxHeight: 0}, function () {
-          $(this).css({visibility: 'hidden'});
-        }).parent().removeClass('on'); */
       } else { //열려져 있지 않은 경우: ul -> visibility -> animate() -> 부모li.on
         $(this).next().css({visibility: 'visible'}).stop().animate({maxHeight: ulHei}).parent().addClass('on');
-
       }
     }
     return false;
@@ -135,13 +127,11 @@ $(document).ready(function() {
     }
     return false;
   });
-
   function familyUp() {
     $('.mobile_family_site').children('a').removeClass('on').next().stop().animate({maxHeight: 0}, function () {
       $(this).css({visibility: 'visible'});
     });
   }
-
   $('.family_site button').on('click', function() {
     $('.family_site ul').toggle()
     $('.family_site').toggleClass('active')
@@ -153,10 +143,6 @@ $(document).ready(function() {
     $('.family_site a').last().on('keydown', function(e){
       if (!e.shiftKey && e.keyCode === 9) $('.family_site button').trigger('click')
     });
-
-
-
-
 }); 
 
 
