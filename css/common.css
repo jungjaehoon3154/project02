@@ -42,8 +42,8 @@
 .mobile .mobile_util{position: relative; height: 60px; padding-left: 30px; line-height: 60px;}
 .mobile .mobile_util .first{color:#ff6600;}
 .mobile .mobile_util span:last-child{margin-left: 20px;}
-.mobile .gnb_close{position: absolute; top: 30px; right: 50px;}
-.mobile .gnb_close span{background: #333; margin-right: 15px; position: absolute; left: 50%; top: 50%; width: 30px; height: 2px;}
+.mobile .gnb_close{position: absolute; top: 17px; right: 25px; width: 23px; height: 23px;}
+.mobile .gnb_close span{background: #333; margin-right: 15px; position: absolute; left: 50%; top: 50%; width: 30px; height: 2px; margin: -1px 0 0 -15px;}
 .mobile .gnb_close .top{transform: rotate(45deg);}
 .mobile .gnb_close .bot{transform: rotate(-45deg);}
 #mobile_gnb{margin-top: 30px;}
