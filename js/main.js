@@ -30,11 +30,7 @@ $(document).ready(function () {
         return false;
     });
 
-<<<<<<< HEAD
     // spec 효과
-=======
-    // 숫자 올라가는 효과
->>>>>>> 0b7e9e050e7b17e6d85e1047df1fe8edc0159661
     $('.counter').counterUp({
         delay: 10,
         time: 1000

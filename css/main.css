@@ -29,10 +29,7 @@
     0% {opacity: 0; transform: translateY(30px);}
     100% {opacity: 1; transform: translateY(0);}
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 0b7e9e050e7b17e6d85e1047df1fe8edc0159661
 /* contents common */
 .title{padding: 90px 0;}
 .wrap{width: 100%; max-width: 1180px; margin: 0 auto;}
@@ -160,8 +157,6 @@
     .news ul li p{position: static; margin-top: 10px; font-size: 14px;}
     .project ul{columns: 1;}
     .project ul li:nth-child(2n-1){display: none;}
-    .news ul li strong{word-wrap: break-word;}
-    .news ul li p{position: static; margin-top: 10px; font-size: 14px;}
 }
 @media all and (max-width: 480px){
     .main_visual .txt_box{bottom: 13%;}

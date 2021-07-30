@@ -132,11 +132,8 @@ $(document).ready(function() {
       $(this).css({visibility: 'visible'});
     });
   }
-<<<<<<< HEAD
   
   // footer 패밀리 사이트 제어
-=======
->>>>>>> 0b7e9e050e7b17e6d85e1047df1fe8edc0159661
   $('.family_site button').on('click', function() {
     $('.family_site ul').toggle()
     $('.family_site').toggleClass('active')
@@ -148,10 +145,7 @@ $(document).ready(function() {
     $('.family_site a').last().on('keydown', function(e){
       if (!e.shiftKey && e.keyCode === 9) $('.family_site button').trigger('click')
     });
-<<<<<<< HEAD
 
-=======
->>>>>>> 0b7e9e050e7b17e6d85e1047df1fe8edc0159661
 }); 
 
 

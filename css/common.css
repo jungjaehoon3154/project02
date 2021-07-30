@@ -32,11 +32,7 @@
 #header.on #gnb > ul > li > a{color: #333;}
 #header.on #gnb > ul > li:hover > a{color: #ff6600;}
 
-<<<<<<< HEAD
 /* mobile nav */
-=======
-/* table ~ mobile nav */
->>>>>>> 0b7e9e050e7b17e6d85e1047df1fe8edc0159661
 .gnb_open{position: relative; width: 33px; height: 35px; text-indent: 100%; white-space: nowrap; overflow: hidden; display: none;}
 .gnb_open .top, .gnb_open .mid, .gnb_open .bot{display: block; position: absolute; width: 32px; height: 2px; background: #fff;}
 #header.on .gnb_open .top, #header.on .gnb_open .mid, #header.on .gnb_open .bot{background: #333;}
