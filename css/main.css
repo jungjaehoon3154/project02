@@ -3,11 +3,9 @@
 /* visual */
 .main_visual{position: relative; color: #fff; width: 100%; height: 100vh;}
 .main_visual .mobile_visual{display: none;}
-
-/* img를 absolute로 변경하면서 수정사항 */
 .main_visual .swiper-container{height: 100%;}
 .main_visual .swiper-slide{overflow: hidden;}
-.main_visual img{position: absolute; width: 100%; height: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); transition: all 10s;}
+.main_visual img{position: absolute; width: auto; height: auto; top: 50%; left: 50%; transform: translate(-50%, -50%); transition: all 10s;}
 .main_visual .swiper-slide.swiper-slide-active img{transform: translate(-50%, -50%) scale(1.2);}
 .main_visual .txt_box{opacity: 0; position: absolute; left: 15%; bottom: 25%;}
 .main_visual strong{display: inline-block; position: relative; font-size: 60px; line-height: 70px; font-weight: 700;  padding-bottom: 20px; margin-bottom: 20px;}
@@ -20,7 +18,6 @@
 .main_visual .controller .stop{background: url(../img/visual/video_stop_icon.png) no-repeat 50% 50% rgba(10,50,84, 0.5);} 
 .main_visual .controller .slide_tab{width: 225px; height: 65px; margin-left: 20px;}
 .main_visual .controller .visual_nav{position: relative; width: 100%; height: 100%; border-radius: 30px; background: #ff6600;}
-
 .swiper-button-prev, .swiper-button-next{background-repeat: no-repeat; width: 31px; height: 7px; position: absolute; top: 50%; transform: translateY(-50%); z-index: 15;}
 .swiper-button-prev{background-image: url(../img/visual/slide_arrow_prev.png); left: 30px;} 
 .swiper-button-next{background-image: url(../img/visual/slide_arrow_next.png); right: 30px;}
@@ -32,8 +29,10 @@
     0% {opacity: 0; transform: translateY(30px);}
     100% {opacity: 1; transform: translateY(0);}
 }
+<<<<<<< HEAD
 
-
+=======
+>>>>>>> 0b7e9e050e7b17e6d85e1047df1fe8edc0159661
 /* contents common */
 .title{padding: 90px 0;}
 .wrap{width: 100%; max-width: 1180px; margin: 0 auto;}
@@ -54,7 +53,7 @@
 .business ul li .hover{opacity: 0; position: absolute; top: 15%; left: 50%; transform: translateX(-50%); transition: all 0.5s ease-in-out; color: #fff; text-align: center}
 .business ul li:hover .hover{opacity: 1;}
 .business ul li .hover em{display: block; font-size: 35px; padding-bottom: 20px;}
-.business ul li .hover p{width: 200px; ; font-size: 18px; line-height: 22px;}
+.business ul li .hover p{width: 200px; font-size: 18px; line-height: 22px;}
 
 /* news */
 .news{position: relative; background: #f3f3f3;}
@@ -73,12 +72,12 @@
 .news ul li:hover::after{transition-delay: 0.1s}
 .news ul li:hover::before{transition-delay: 0.1s}
 .news ul li:hover a::after, .news ul li:hover a::before{transition-delay: 0.3s}
-.news ul li strong{text-align: left; width: 450px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.news ul li strong{text-align: left; width: 100%; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
 .news ul li p{position: absolute; top: 38px; right: 50px;}
 
 /* spec */
 .spec_inner{position: relative; margin-top: 80px; height: 450px; background: url(../img/main/spec_bg.jpg); background-repeat: no-repeat; background-attachment: fixed; background-size: cover; color: #fff; z-index: 1;}
-.spec_inner::before{content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #333; opacity: 0.7; z-index: -1;}
+.spec_inner::before{content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: #333; opacity: 0.7; z-index: -1;}
 .spec_inner ul{height: 100%; display: flex; justify-content: space-between; align-items: center; padding: 0 50px;}
 .spec_inner ul li{text-align: center;}
 .spec_inner ul li strong{font-size: 70px;}
@@ -150,15 +149,19 @@
     .main_visual h2{font-size: 16px;}
     .main_visual .controller{position: absolute; bottom: 5%; left: 2%; z-index: 10;}
     .main_visual .controller .button_box, .main_visual .controller .button_box button{width: 55px; height: 55px;}
-    .news ul li p{position: static; margin-top: 10px; font-size: 14px;}
+    
     .spec_inner ul{flex-wrap: wrap; padding: 0 20px;}
     .spec_inner ul li{width: 50%;}
     .spec_inner ul li strong{font-size: 50px;}
     .spec_inner ul li p{font-size: 16px;}
 }
 @media all and (max-width: 650px){
+    .news ul li strong{word-wrap: break-word;}
+    .news ul li p{position: static; margin-top: 10px; font-size: 14px;}
     .project ul{columns: 1;}
     .project ul li:nth-child(2n-1){display: none;}
+    .news ul li strong{word-wrap: break-word;}
+    .news ul li p{position: static; margin-top: 10px; font-size: 14px;}
 }
 @media all and (max-width: 480px){
     .main_visual .txt_box{bottom: 13%;}
@@ -167,7 +170,6 @@
     .title{padding: 50px 0;}
     .title h3{padding-bottom: 50px; font-size: 26px;}
     .business ul li strong{font-size: 22px;}
-    .news ul li strong{white-space: normal; line-height: 1.2; text-align: left; word-wrap: break-word; width: 250px;}
     .project ul li{margin-bottom: 40px;}
     .promote .right strong{font-size: 22px;}
     .promote .right p{font-size: 14px}

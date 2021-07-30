@@ -29,7 +29,7 @@ button{border: none; background: none; cursor: pointer; font-family: inherit; fo
 img{border: none; vertical-align: top;}
 header, nav, section, footer{display: block;}
 
-body{font-family: 'KoPubWorldDotum', 'NotoSansKR', sans-serif; color: #333; font-weight: 400; line-height: 1; word-break: keep-all;}
+body{font-family: 'KoPubWorldDotum', sans-serif; color: #333; font-weight: 400; line-height: 1; word-break: keep-all;}
 
 #skip a{position: absolute; top: 0; left: -1000px; z-index: 1000;}
 #skip a:focus{left: 0; width: 100%; height: 50px; line-height: 50px; background: #000; color: #fff; text-align: center;}

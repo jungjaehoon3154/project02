@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="jungjaehoon">
+    <meta name="description" content="한화건설 사이트">
+    <meta name="keywords" content="한화건설, hanwha E&C">
     <title>한화건설</title>
     <!-- favicon -->
     <link rel="apple-touch-icon" href="img/common/favicon.ico">
@@ -15,7 +18,8 @@
     <link rel="stylesheet" href="css/main.css">
     <!-- js -->
     <script src="js/jquery-1.12.4.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/common.js"></script>
     <script src="js/main.js"></script>
@@ -27,9 +31,6 @@
     </div>
     <div id="wrap">
         <header id="header">
-            <div class="header_wrap">
-                
-            </div>
             <div class="pc">
                 <h1 class="logo">
                     <a href="#"><span class="blind">한화건설</span></a>
@@ -118,7 +119,7 @@
             <div class="mobile">
                 <div class="mobile_util">
                     <span class="blind">언어선택</span>
-                    <span><a href="#" class="first">KOR</a></span> <!-- 모바일 네비게이션이 열리고 처음 포커스 이동 대상 -->
+                    <span><a href="#" class="first">KOR</a></span>
                     <span><a href="#">ENG</a></span>
                 </div>
                 <nav id="mobile_gnb">
@@ -184,31 +185,42 @@
                 </nav>    
                 <div class="mobile_social">
                     <ul>
-                        <li class="blog"><a href="https://blog.naver.com/hanwha_enc" target="_blank"></a><span class="blind">블로그</span></li>
-                        <li class="youtube"><a href="https://www.youtube.com/channel/UCYjfgiex4aTgDgcn0zsU-MA" target="_blank"></a><span class="blind">유튜브</span></li>
-                        <li class="post"><a href="https://m.post.naver.com/hanwha_enc" target="_blank"></a><span class="blind">포스트</span></li>
+                        <li class="blog">
+                            <a href="https://blog.naver.com/hanwha_enc" target="_blank">
+                                <span class="blind">블로그</span>
+                            </a>
+                        </li>
+                        <li class="youtube">
+                            <a href="https://www.youtube.com/channel/UCYjfgiex4aTgDgcn0zsU-MA" target="_blank">
+                                <span class="blind">유튜브</span>
+                            </a>
+                        </li>
+                        <li class="post">
+                            <a href="https://m.post.naver.com/hanwha_enc" target="_blank">
+                                <span class="blind">포스트</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="mobile_family_site">
-                    <a href="" class="link">Family Site</a>
+                    <a href="#" class="link">Family Site</a>
                     <ul class="family_box">
-                        <li><a href="#">(주)한화</a></li>
-                        <li><a href="#">한화에어로스페이스</a></li>
-                        <li><a href="#">한화디펜스</a></li>
-                        <li><a href="#">한화시스템</a></li>
-                        <li><a href="#">한화테크윈</a></li>
-                        <li><a href="#">한화정밀기계</a></li>
-                        <li><a href="#">한화파워시스템</a></li>
-                        <li><a href="#">한화솔루션</a></li>
-                        <li><a href="#">한화종합화학</a></li>
-                        <li><a href="#">한화토탈</a></li>
-                        <li><a href="#">여천NCC</a></li>
-                        <li><a href="#">한화에너지</a></li>
+                        <li><a href="https://www.hanwhacorp.co.kr/index.jsp" target="_blank">(주)한화</a></li>
+                        <li><a href="https://www.hanwhaaerospace.co.kr/Default.asp" target="_blank">한화에어로스페이스</a></li>
+                        <li><a href="https://www.hanwha-defense.co.kr/kor/index.do" target="_blank">한화디펜스</a></li>
+                        <li><a href="https://www.hanwhasystems.com/kr/index.do" target="_blank">한화시스템</a></li>
+                        <li><a href="https://www.hanwha-security.com/ko/" target="_blank">한화테크윈</a></li>
+                        <li><a href="https://www.hanwha-pm.com/ko/" target="_blank">한화정밀기계</a></li>
+                        <li><a href="https://www.hanwhapowersystems.co.kr/" target="_blank">한화파워시스템</a></li>
+                        <li><a href="https://www.hanwhasolutions.com/ko/" target="_blank">한화솔루션</a></li>
+                        <li><a href="https://www.hanwha.co.kr/business/manufacture/general_chemical.do" target="_blank">한화종합화학</a></li>
+                        <li><a href="https://www.hanwha-total.com/" target="_blank">한화토탈</a></li>
+                        <li><a href="https://www.yncc.co.kr/ko/index.do" target="_blank">여천NCC</a></li>
+                        <li><a href="https://hec.hanwha.co.kr/main.do" target="_blank">한화에너지</a></li>
                     </ul>
                 </div>
-                <!-- 가장 마지막으로 이동 -->
                 <button type="button" class="gnb_close last">
-                    <span class="blind">전체메뉴 닫기</span>
+                    <p class="blind">전체메뉴 닫기</p>
                     <span class="top"></span>
                     <span class="bot"></span>
                 </button>
@@ -220,32 +232,32 @@
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <img class="pc_visul" src="img/visual/visual_01.jpg" alt="">
-                        <img class="mobile_visual" src="img/visual/visual_m01.jpg" alt="">
+                        <img class="pc_visul" src="img/visual/visual_01.jpg" alt="서울숲 갤러리아 포레">
+                        <img class="mobile_visual" src="img/visual/visual_m01.jpg" alt="서울숲 갤러리아 포레">
                         <div class="txt_box">
                             <strong>서울숲과 한강을<br>모두 가진<br>하이엔드 주거공간</strong>
                             <h2>서울숲 갤러리아 포레</h2>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img class="pc_visul" src="img/visual/visual_02.jpg" alt="">
-                        <img class="mobile_visual" src="img/visual/visual_m02.jpg" alt="">
+                        <img class="pc_visul" src="img/visual/visual_02.jpg" alt="포레나 영등포">
+                        <img class="mobile_visual" src="img/visual/visual_m02.jpg" alt="포레나 영등포">
                         <div class="txt_box">
                             <strong>서울 중심에서 빛나는<br>프리미엄 브랜드<br>FORENA</strong>
                             <h2>포레나 영등포</h2>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img class="pc_visul" src="img/visual/visual_03.jpg" alt="">
-                        <img class="mobile_visual" src="img/visual/visual_m03.jpg" alt="">
+                        <img class="pc_visul" src="img/visual/visual_03.jpg" alt="이라크 비스미야 신도시">
+                        <img class="mobile_visual" src="img/visual/visual_m03.jpg" alt="이라크 비스미야 신도시">
                         <div class="txt_box">
                             <strong>10만 가구, 60만 인구<br>12조원 규모의<br>해외 신도시 수출</strong>
                             <h2>이라크 비스미야 신도시</h2>
                         </div>
                     </div>
                     <div class="swiper-slide">
-                        <img class="pc_visul" src="img/visual/visual_04.jpg" alt="">
-                        <img class="mobile_visual" src="img/visual/visual_m04.jpg" alt="">
+                        <img class="pc_visul" src="img/visual/visual_04.jpg" alt="사우디 Umm Wu'al인산 플랜트">
+                        <img class="mobile_visual" src="img/visual/visual_m04.jpg" alt="사우디 Umm Wu'al인산 플랜트">
                         <div class="txt_box">
                             <strong>연간 1,500,000톤<br>Phosphoric Acid<br>생산설비</strong>
                             <h2>사우디 Umm Wu'al인산 플랜트</h2>
@@ -384,7 +396,7 @@
                         <ul>
                             <li>
                                 <a href="#">
-                                    <img src="img/main/project_01.jpg" alt="">
+                                    <img src="img/main/project_01.jpg" alt="장교동 한화빌딩">
                                     <h4>장교동 한화빌딩</h4>
                                     <span>한화건설의 오피스 빌딩은 단순한 업무공간을 넘어서 도시의 얼굴이 되며 입주기업의 품격을 한층 높여주는 랜드마크로 완성됩니다.</span>
                                 </a>
@@ -394,7 +406,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="img/main/project_02.jpg" alt="">
+                                    <img src="img/main/project_02.jpg" alt="포레나 노원">
                                     <h4>포레나 노원</h4>
                                     <span>한화건설은 경쟁력 있는 입지 선정, 특화 설계, 시공 및 품질관리, 고객서비스에 이르기까지 포레나의 브랜드 가치를 지켜 나가고 있습니다.</span>
                                 </a>
@@ -404,7 +416,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="img/main/project_03.jpg" alt="">
+                                    <img src="img/main/project_03.jpg" alt="포레나 광교">
                                     <h4>포레나 광교</h4>
                                     <span>2019년 프리미엄 주거 브랜드 포레나(FORENA)를 새롭게 런칭하고 주거문화의 변화를 이끌고 있습니다.</span>
                                 </a>
@@ -414,7 +426,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="img/main/project_04.jpg" alt="">
+                                    <img src="img/main/project_04.jpg" alt="한화큐셀 태양광 진천공장">
                                     <h4>한화큐셀 태양광 진천공장 (S-One)</h4>
                                     <span>한화건설은 친환경 태양광 셀을 제조하는 한화큐셀 진천 공장 등 첨단 산업플랜트를 다수 건설해 왔으며, 리사이클링센터 분야에서 다양한 경험을 보유하고 있습니다.</span>
                                 </a>
@@ -424,7 +436,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="img/main/project_05.jpg" alt="">
+                                    <img src="img/main/project_05.jpg" alt="사우디 Umm Wu'al 인산 플랜트">
                                     <h4>사우디 Umm Wu'al 인산 플랜트</h4>
                                     <span>한화건설은 세계 시장에서 사우디아라비아, 쿠웨이트, 알제리 등 중동지역을 중심으로 석유화학, 정유, 가스 로 대표되는 화공플랜트 분야의 강자로 자리매김하고 있습니다.</span>
                                 </a>
@@ -434,7 +446,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="img/main/project_06.jpg" alt="">
+                                    <img src="img/main/project_06.jpg" alt="갤러리아 광교">
                                     <h4>갤러리아 광교</h4>
                                     <span>한화건설은 수원컨벤션센터 마이스 복합단지, 서울역 북부역세권 및 대전역세권 개발 등 복합개발사업에서 높은 경쟁력을 갖추고 있습니다.</span>
                                 </a>
@@ -444,7 +456,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="img/main/project_07.jpg" alt="">
+                                    <img src="img/main/project_07.jpg" alt="경부고속도로 확장공사">
                                     <h4>경부고속도로 확장공사 (언양-영천)</h4>
                                     <span>한화건설은 1967년 창립 이래 수 많은 공공 SOC(사회간접자본) 사업에 참여하여 국토의 균형 개발과 국가경제 발전에 이바지해 왔습니다.</span>
                                 </a>
@@ -454,7 +466,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="img/main/project_08.jpg" alt="">
+                                    <img src="img/main/project_08.jpg" alt="영양 풍력발전단지">
                                     <h4>영양 풍력발전단지</h4>
                                     <span>한화건설은 제한된 에너지원인 석유, 석탄, 가스 등의 고갈을 대비하고, 화석연료 사용에 따른 환경오염을 방지하기 위해 풍력과 태양광 등 신재생에너지 기술개발에 집중하고 있습니다.</span>
                                 </a>
@@ -464,7 +476,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="img/main/project_09.jpg" alt="">
+                                    <img src="img/main/project_09.jpg" alt="이라크 비스마야 신도시">
                                     <h4>이라크 비스마야 신도시</h4>
                                     <span>한화건설이 이라크에 건설 중인 10만 가구 규모의 ‘비스마야 신도시’는 한국형 신도시를 해외에 그대로 접목시킨 계획 도시입니다.</span>
                                 </a>
@@ -474,7 +486,7 @@
                             </li>
                             <li>
                                 <a href="#">
-                                    <img src="img/main/project_10.jpg" alt="">
+                                    <img src="img/main/project_10.jpg" alt="필리핀 아레나 돔 공연장">
                                     <h4>필리핀 아레나 돔 공연장</h4>
                                     <span>최고의 기술력을 갖춘 한화건설은 세계 최대규모의돔 공연장인 ‘필리핀 아레나’를 단독으로 시공하는 등 글로벌 건설시장에서도 높은 평가를 이끌어 내고 있습니다.</span>
                                 </a>
@@ -497,7 +509,7 @@
                         <li class="right">
                             <a href="#">
                                 <div class="img_box">
-                                    <img src="img/main/promote_01.jpg" alt="">
+                                    <img src="img/main/promote_01.jpg" alt="건설현장">
                                 </div>
                                 <div class="txt">
                                     <strong>기업가치관</strong>
@@ -508,7 +520,7 @@
                         <li class="right">
                             <a href="#">
                                 <div class="img_box">
-                                    <img src="img/main/promote_02.jpg" alt="">
+                                    <img src="img/main/promote_02.jpg" alt="퍼즐 맞추기">
                                 </div>
                                 <div class="txt">
                                     <strong>채용안내</strong>
@@ -536,18 +548,19 @@
                             <span>FamilySite</span>
                         </button>
                         <ul class="family_box">
-                            <li><a href="#">(주)한화</a></li>
-                            <li><a href="#">한화에어로스페이스</a></li>
-                            <li><a href="#">한화디펜스</a></li>
-                            <li><a href="#">한화시스템</a></li>
-                            <li><a href="#">한화테크윈</a></li>
-                            <li><a href="#">한화정밀기계</a></li>
-                            <li><a href="#">한화파워시스템</a></li>
-                            <li><a href="#">한화솔루션</a></li>
-                            <li><a href="#">한화종합화학</a></li>
-                            <li><a href="#">한화토탈</a></li>
-                            <li><a href="#">여천NCC</a></li>
-                            <li><a href="#">한화에너지</a></li>
+                            <li><a href="https://www.hanwhacorp.co.kr/index.jsp" target="_blank">(주)한화</a></li>
+                            <li><a href="https://www.hanwhaaerospace.co.kr/Default.asp" target="_blank">한화에어로스페이스</a></li>
+                            <li><a href="https://www.hanwha-defense.co.kr/kor/index.do" target="_blank">한화디펜스</a></li>
+                            <li><a href="https://www.hanwhasystems.com/kr/index.do" target="_blank">한화시스템</a></li>
+                            <li><a href="https://www.hanwha-security.com/ko/" target="_blank">한화테크윈</a></li>
+                            <li><a href="ttps://www.hanwha-pm.com/ko/" target="_blank">한화정밀기계</a></li>
+                            <li><a href="ttps://www.hanwhapowersystems.co.kr/" target="_blank">한화파워시스템</a></li>
+                            <li><a href="https://www.hanwhasolutions.com/ko/" target="_blank">한화솔루션</a></li>
+                            <li><a href="ttps://www.hanwha.co.kr/business/manufacture/general_chemical.do" target="_blank">한화종합화학</a></li>
+                            <li><a href="https://www.hanwha-total.com/" target="_blank">한화토탈</a></li>
+                            <li><a href="https://www.yncc.co.kr/ko/index.do" target="_blank">여천NCC</a></li>
+                            <li><a href="https://hec.hanwha.co.kr/main.do" target="_blank">한화에너지</a></li>
+                            <li><a href="https://www.hanwhacorp.co.kr/index.jsp" target="_blank">(주)한화</a></li>
                         </ul>
                     </div>
                 </div>
@@ -572,8 +585,6 @@
         </footer>
         <!-- // footer -->
     </div>
-
-    
 
 </body>
 </html>

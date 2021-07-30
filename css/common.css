@@ -1,5 +1,8 @@
 @charset "utf-8";
 
+/* wrap IE 스크롤 제어 */
+#wrap{overflow-x: hidden;}
+
 /* header */
 #header{position: fixed; top: 0 ;left: 0; width: 100%; height: 90px; color: #fff; z-index: 100;}
 #header .logo{position: absolute; top: 50%; transform: translateY(-50%); left: 30px;}
@@ -11,7 +14,7 @@
 #header .util .lang{position: relative;}
 #header .util .lang button{background: url(../img/common/global_ico.png) no-repeat; width: 25px; height: 25px;}
 #header .util .lang ul{position: absolute; top: 57px; left: 50%; transform: translateX(-50%); width: 80px; height: 60px; padding: 10px 0; background: #fff; color: #222; border: 1px solid #eee; border-top: 3px solid #ff6600; display: none;}
-#header .util .lang ul::before{content: ""; position: absolute; top: -36px; left: 0; width: 100%; height: 33px; background: url("../img/common/gnbLi_on.png") no-repeat 50% 100%; }
+#header .util .lang ul::before{content: ""; position: absolute; top: -36px; left: 0; width: 100%; height: 33px; background: url("../img/common/gnbLi_on.png") no-repeat 50% 100%;}
 #header .util .lang ul a{display: block; padding: 7px 0; text-align: center;}
 #header .util .lang ul a:hover{color: #ff6600;}
 #header.on .lang button{background: url(../img/common/global_ico_on.png) no-repeat; width: 25px; height: 25px;}
@@ -25,39 +28,36 @@
 #gnb > ul > li:hover > a::after{left: 0; width: 100%;}
 #gnb > ul > li > ul{height: 250px; padding-top: 15px;} 
 #gnb > ul > li > ul > li{line-height: 35px;}
-#gnb.active{color: #222; background: #fff; box-shadow: 0 1px 10px rgba(0 0 0 / 20%);}
-#header.on #gnb > ul > li > a{color: #222;}
+#gnb.active{color: #333; background: #fff; box-shadow: 0 1px 10px rgba(0 0 0 / 20%);}
+#header.on #gnb > ul > li > a{color: #333;}
 #header.on #gnb > ul > li:hover > a{color: #ff6600;}
 
-
+<<<<<<< HEAD
+/* mobile nav */
+=======
 /* table ~ mobile nav */
+>>>>>>> 0b7e9e050e7b17e6d85e1047df1fe8edc0159661
 .gnb_open{position: relative; width: 33px; height: 35px; text-indent: 100%; white-space: nowrap; overflow: hidden; display: none;}
 .gnb_open .top, .gnb_open .mid, .gnb_open .bot{display: block; position: absolute; width: 32px; height: 2px; background: #fff;}
 #header.on .gnb_open .top, #header.on .gnb_open .mid, #header.on .gnb_open .bot{background: #333;}
 .gnb_open .top{top: 7px;}
 .gnb_open .mid{top: 50%; transform:translateY(-50%);}
 .gnb_open .bot{bottom: 7px;}
-
 #dim, .mobile{position: fixed; top: 0; height: 100%; z-index: 1000;}
 #dim{display: none; left: 0; width: 100%; background: rgba(0,0,0,.5);}
 .mobile{visibility: hidden; overflow: hidden; max-width: 0; background: #fff; left: 100%; width: 80%; color: #333; padding-bottom: 50px; overflow-y: auto;}
 .mobile .mobile_util{position: relative; height: 60px; padding-left: 30px; line-height: 60px;}
 .mobile .mobile_util .first{color:#ff6600;}
 .mobile .mobile_util span:last-child{margin-left: 20px;}
-.mobile .gnb_close{position: absolute; top: 23px; right: 50px;}
-.mobile .gnb_close span{background: #333; margin-right: 15px; position: absolute; left: 50%; top: 50%; width: 30px; height: 2px;}
+.mobile .gnb_close{position: absolute; top: 17px; right: 25px; width: 23px; height: 23px;}
+.mobile .gnb_close span{background: #333; margin-right: 15px; position: absolute; left: 50%; top: 50%; width: 30px; height: 2px; margin: -1px 0 0 -15px;}
 .mobile .gnb_close .top{transform: rotate(45deg);}
 .mobile .gnb_close .bot{transform: rotate(-45deg);}
 #mobile_gnb{margin-top: 30px;}
-#mobile_gnb > ul > li{margin-bottom: 20px;} /* 40px */
+#mobile_gnb > ul > li{margin-bottom: 20px;}
 #mobile_gnb > ul > li > a{position: relative; display: block; padding-left: 30px; font-size: 18px; font-weight: 700; margin-bottom: 15px;}
 #mobile_gnb > ul > li > a::after{position: absolute; content: ""; top: 50%; transform: translateY(-50%); right: 30px; background: url(../img/common/link_arrow.png) no-repeat; width: 15px; height: 8px; background-size: cover;}
-/* 화살표 회전 시켜주세요 */
 #mobile_gnb > ul > li.on > a::after{transform: rotate(180deg);}
-
-/* 모바일 네비게이션에서는 display: none 하지 마세요. 아이폰에서 포커스가 가지 못하는 버그 있습니다. 대신 visibility: hidden; overflow: hidden; max-height: 0;으로 대신 합니다
-뎁스2 ul에는 수직방향에 여백이 존재하면 안됩니다. max-height: 0; 이라고 해도 여백때문에 공백이 생겨나니까요;
-수평여백은 두고 수직여백은 첫번째와 마지막 li 태그에서 넘겨줍니다 */
 #mobile_gnb > ul > li > ul{visibility: hidden; overflow: hidden; max-height: 0; padding: 0px 30px; border-top: 1px solid #e9e9e9; border-bottom: 1px solid #e9e9e9; background: #f8f8f8;}
 #mobile_gnb ul li ul li:first-child{padding-top: 12px;}
 #mobile_gnb ul li ul li:last-child{padding-bottom: 12px;}
@@ -75,11 +75,9 @@
 .mobile .mobile_family_site .link::before{position: absolute; content: ""; bottom: 0; left: 0; width: 100%; background: #ff6600; height: 3px;}
 .mobile .mobile_family_site .link::after{position: absolute; content: ""; top: 0; right: 0; width: 11px; height: 7px; background: url(../img/common/family_site_arrow.png) no-repeat; background-size: cover;} 
 .mobile .mobile_family_site .link.on::after{transform: rotate(180deg);}
-/* 여기도 display: none; 대신에 visibility: hidden으로 수정합니다 */
 .mobile .mobile_family_site .family_box{visibility: hidden; overflow: hidden; max-height: 0;}
 .mobile .mobile_family_site .family_box li:first-child{margin-top: 20px;}
 .mobile .mobile_family_site .family_box a{display: block; padding: 10px 0;}
-
 
 /* footer */
 #footer{height: 250px; width: 100%; background: #222; color: #fff;}
@@ -117,7 +115,6 @@
     #header .logo{left: 20px;}
     #header .util, #gnb{display: none;}
     .gnb_open{display: block; position: absolute; top: 25%; right: 3%;} 
-    /* .mobile{visibility: visible;max-width: 80%;} */
 }
 @media all and (max-width: 1024px){
     #footer .family_site{display: none;}
