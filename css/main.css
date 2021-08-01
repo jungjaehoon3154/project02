@@ -5,7 +5,7 @@
 .main_visual .mobile_visual{display: none;}
 .main_visual .swiper-container{height: 100%;}
 .main_visual .swiper-slide{overflow: hidden;}
-.main_visual img{position: absolute; width: auto; height: auto; top: 50%; left: 50%; transform: translate(-50%, -50%); transition: all 10s;}
+.main_visual img{position: absolute; width: 100%; height: 100%; top: 50%; left: 50%; transform: translate(-50%, -50%); transition: all 10s;}
 .main_visual .swiper-slide.swiper-slide-active img{transform: translate(-50%, -50%) scale(1.2);}
 .main_visual .txt_box{opacity: 0; position: absolute; left: 15%; bottom: 25%;}
 .main_visual strong{display: inline-block; position: relative; font-size: 60px; line-height: 70px; font-weight: 700;  padding-bottom: 20px; margin-bottom: 20px;}
